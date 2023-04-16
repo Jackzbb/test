@@ -80,22 +80,4 @@ public static void main(String[] args){
             System.out.println("找到了你要的关键字，下标是："+index);
         }
     }}*/
-public static void main(String[] args) {
-    int[] array = {12, 24, 3, 8, 6};
-    for (int i = 0; i < array.length - 1; i++) {
-        boolean flg = false;    //布尔型（boolean）它的取值只能是常量true或者false
-        for (int j = 0; j < array.length - 1 - i; j++) {
-            if (array[j] > array[j + 1]) {
-                int temp = array[j];
-                array[j] = array[j + 1];
-                array[j + 1] = temp;
-                flg = true; //打个比方 2 1 3 4 5 最开始flg=false 2大于1进行了一次交换之后
-            }             //flg=true  之后2不大于3  不再进行交换
-        }
-        if (flg == false) {
-            break;
-        }
-    }
-    System.out.println("从小到大排序后的结果是: " + Arrays.toString(array));
-}
 }
